@@ -1,39 +1,9 @@
-body {
-    background-color: #e7d9f1;
-    margin: 0;
-    padding: 0;
+.micro:hover {
+    background-color: #d8f3ff75;
+    border-radius: 20%;
 }
 
-#title , footer {
-    background-color: #2e4d6f;
-    color: #c4e5f4;
-    text-align: center;
-    margin: 0;
-    
-}
-
-footer {
-    width: 100%;
-    bottom: 0;
-}
-
-h1 , h3 {
-    padding: 30px;
-    margin: 0;
-}
-
-img {
-    width: 100px;
-    height: auto;
-    margin: 10px;
-}
-
-p {
-    font-size: 16px;
-    font-weight: 100;
-}
-
-.macro:hover , .micro:hover {
+.macro:hover {
     background-color: #8ea0dd80;
     border-radius: 20%;
 }

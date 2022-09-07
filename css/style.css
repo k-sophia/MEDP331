@@ -1,0 +1,44 @@
+body {
+    background-color: #e7d9f1;
+    margin: 0;
+    padding: 0;
+}
+
+#title , footer {
+    background-color: #2e4d6f;
+    color: #c4e5f4;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+footer {
+    width: 100%;
+    padding: 15px;
+    bottom: 0;
+}
+
+.footer-link {
+    color: #c4e5f4;
+}
+
+.footer-link:hover {
+    color: #e2f6ff;
+    font-weight: 700;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
