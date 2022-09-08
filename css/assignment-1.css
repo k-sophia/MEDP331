@@ -11,6 +11,15 @@
     margin: 50px;
 }
 
+.web-example a {
+    color: #2e4d6f;
+}
+
+.web-example a:hover {
+    color: #0e2843;
+    font-weight: 700;
+}
+
 iframe {
     width: 498;
     height: 598;
