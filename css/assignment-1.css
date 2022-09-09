@@ -12,12 +12,17 @@
 }
 
 .web-example a {
-    color: #2e4d6f;
+    color: #60308C;
 }
 
 .web-example a:hover {
-    color: #0e2843;
-    font-weight: 700;
+    color: #FFDA0A;
+    text-shadow: 1px 1px 1px #8B79D9;
+    font-weight: 900;
+}
+
+h2 {
+    color: #431259;
 }
 
 iframe {

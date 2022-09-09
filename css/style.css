@@ -1,29 +1,29 @@
 body {
-    background-color: #e7d9f1;
+    background-color: #fffff0;
     margin: 0;
     padding: 0;
 }
 
-#title , footer {
-    background-color: #2e4d6f;
-    color: #c4e5f4;
+header, footer {
+    background-color: #10002B;
+    color: #E6F2FF;
     text-align: center;
     margin: 0;
     padding: 30px;
 }
 
-footer {
+header, footer {
     width: 100%;
     padding: 15px;
     bottom: 0;
 }
 
-.footer-link {
-    color: #c4e5f4;
+.footer-link, #title {
+    color: #E6F2FF;
 }
 
 .footer-link:hover {
-    color: #e2f6ff;
+    color: #FFFFB7;
     font-weight: 700;
 }
 
@@ -34,11 +34,18 @@ img {
 }
 
 p {
+    color: #431259;
     font-size: 16px;
     font-weight: 100;
+    text-shadow: 2px 2px 8px #FFEE70;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #60308C;
+}
+
+a:hover {
+    color: #FFDA0A;
+    text-shadow: 2px 2px 8px #8B79D9;
 }

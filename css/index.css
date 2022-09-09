@@ -1,11 +1,43 @@
 .micro:hover {
-    background-color: #d8f3ff75;
-    border-radius: 20%;
+    /* background: radial-gradient(#CCDCFF , #fff18500); */
+    background: var(--micro-background-color);
+    border-radius: 30%;
 }
 
 .macro:hover {
-    background-color: #8ea0dd80;
-    border-radius: 20%;
+    /* background: radial-gradient(#FFF185 , #fff18500); */
+    background: var(--macro-background-color);
+    border-radius: 30%;
+}
+
+footer button {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 25%;
+}
+
+#btn-light {
+    background-color: #fffff0;
+    color: #431259;
+
+    border: 1px solid;
+    box-shadow: 
+        1px 1px 3px #10002B,
+        -1px -1px 3px #10002B;
+}
+
+#btn-dark {
+    background-color: #10002B;
+    color: #fffff0;
+
+    border: 1px solid;
+    box-shadow: 
+        1px 1px 3px #CCDCFF,
+        -1px -1px 3px #CCDCFF;
+}
+
+#btn-light:hover , #btn-dark:hover {
+    font-weight: 900;
 }
 
 /* Flex Layout */
