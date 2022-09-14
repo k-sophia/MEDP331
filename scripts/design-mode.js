@@ -1,14 +1,16 @@
-let hour = new Date().getHours();
+/*************************  Light + Dark Mode *************************/
+
+let hour = new Date().getHours()
 console.log(hour)
 
-let body = document.querySelector('body');
-let header = document.querySelector('header');
-let title = document.querySelector('#title');
-let footer = document.querySelector('footer');
-let micro = document.getElementsByClassName('micro');
-let microIMG = document.getElementsByClassName('micro-img');
-let macro = document.getElementsByClassName('macro');
-let macroIMG = document.getElementsByClassName('macro-img');
+let body = document.querySelector('body')
+let header = document.querySelector('header')
+let title = document.querySelector('#title')
+let footer = document.querySelector('footer')
+let micro = document.getElementsByClassName('micro')
+let microIMG = document.getElementsByClassName('micro-img')
+let macro = document.getElementsByClassName('macro')
+let macroIMG = document.getElementsByClassName('macro-img')
 let p = document.getElementsByTagName('p')
 
 // hour = 8
@@ -28,11 +30,11 @@ if(hour >= 18 || hour < 6) { //6PM - 6AM
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign.png';
+        microIMG[i].src = '../img/micro-assign.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign.png';
+        macroIMG[i].src = '../img/macro-assign.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -55,11 +57,11 @@ else {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign-dark.png';
+        microIMG[i].src = '../img/micro-assign-dark.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign-dark.png';
+        macroIMG[i].src = '../img/macro-assign-dark.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -83,11 +85,11 @@ function lightMode() {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign.png';
+        microIMG[i].src = '../img/micro-assign.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign.png';
+        macroIMG[i].src = '../img/macro-assign.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -111,14 +113,18 @@ function darkMode() {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign-dark.png';
+        microIMG[i].src = '../img/micro-assign-dark.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign-dark.png';
+        macroIMG[i].src = '../img/macro-assign-dark.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
         p[i].style.color = '#E6F2FF'
     }
 }
+
+/*************************  Light + Dark Mode END *************************/
+
+/*************************  No Idea *************************/
