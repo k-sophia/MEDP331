@@ -20,6 +20,7 @@ header, footer {
 
 .footer-link, #title {
     color: #E6F2FF;
+    text-shadow: 1px 1px 3px #FFFFB7;
 }
 
 .footer-link:hover {

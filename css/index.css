@@ -1,19 +1,29 @@
-.micro:hover {
-    /* background: radial-gradient(#CCDCFF , #fff18500); */
-    background: var(--micro-background-color);
-    border-radius: 30%;
+#title {
+    font-size: 50px;
 }
 
-.macro:hover {
-    /* background: radial-gradient(#FFF185 , #fff18500); */
-    background: var(--macro-background-color);
-    border-radius: 30%;
+#day-quote {
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: 'Kalam';
+    font-size: 25px;
+  /* text-shadow: 4px 4px 4px #aaa; */
 }
 
-footer button {
+button {
     margin: 15px;
     padding: 10px;
     border-radius: 25%;
+}
+
+#btn-quote {
+    background-image: linear-gradient(#fffff0 , #CCDCFF);
+    box-shadow: 
+        1px 1px 3px #fffff0,
+        -1px -1px 3px #fffff0;
+    color: #431259;
+    border:groove;
+    margin-top: 5px;
 }
 
 #btn-light {
@@ -36,8 +46,20 @@ footer button {
         -1px -1px 3px #CCDCFF;
 }
 
-#btn-light:hover , #btn-dark:hover {
+#btn-light:hover , #btn-dark:hover , #btn-quote:hover{
     font-weight: 900;
+}
+
+/* assignments */
+
+.micro:hover {
+    background: var(--micro-background-color);
+    border-radius: 30%;
+}
+
+.macro:hover {
+    background: var(--macro-background-color);
+    border-radius: 30%;
 }
 
 /* Flex Layout */
