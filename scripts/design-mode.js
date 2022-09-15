@@ -33,11 +33,11 @@ if(hour >= 18 || hour < 6) { //6PM - 6AM
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign.png'
+        microIMG[i].src = 'img/micro-assign.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign.png'
+        macroIMG[i].src = 'img/macro-assign.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -64,11 +64,11 @@ else {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign-dark.png'
+        microIMG[i].src = 'img/micro-assign-dark.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign-dark.png'
+        macroIMG[i].src = 'img/macro-assign-dark.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -94,11 +94,11 @@ function lightMode() {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign.png'
+        microIMG[i].src = 'img/micro-assign.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign.png'
+        macroIMG[i].src = 'img/macro-assign.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
@@ -126,97 +126,14 @@ function darkMode() {
     }
 
     for( let i = 0; i < microIMG.length; i++ ){
-        microIMG[i].src = '../img/micro-assign-dark.png'
+        microIMG[i].src = 'img/micro-assign-dark.png'
     }
 
     for( let i = 0; i < macroIMG.length; i++ ){
-        macroIMG[i].src = '../img/macro-assign-dark.png'
+        macroIMG[i].src = 'img/macro-assign-dark.png'
     }
 
     for( let i = 0; i < p.length; i++ ){
         p[i].style.color = '#E6F2FF'
     }
-}
-
-
-
-/*************************  Day Quote *************************/
-
-let day = new Date().getDay()
-//console.log(day)
-
-let arr = [
-    "we don’t make mistakes, <br> just happy little accidents",
-    "every artist was first an amateur",
-    "you can’t wait for inspiration, <br> you have to go after it with a club",
-    "the world of reality has its limits; <br> the world of imagination is boundless",
-    "I don’t paint dreams or nightmares, <br> I paint my own reality",
-    "laughter is timeless,<br> imagination has no age, <br> and dreams are forever",
-    "my imagination makes me human and makes me a fool; <br> it gives me all the world and exiles me from it"
-]
-
-//day = 1
-if (day == 1) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 2) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 3) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 4) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 5) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 6) {
-    quote.innerHTML = arr[day - 1]
-}
-
-if (day == 7) {
-    quote.innerHTML = arr[day - 1]
-}
-
-function changeQuote() {
-    day = day + 1
-
-    if(day >= 8) {
-        day = 1
-    }
-
-    if (day == 1) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 2) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 3) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 4) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 5) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 6) {
-        quote.innerHTML = arr[day - 1]
-    }
-    
-    if (day == 7) {
-        quote.innerHTML = arr[day - 1]
-    }
-
 }
