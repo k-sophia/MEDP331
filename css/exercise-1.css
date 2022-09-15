@@ -1,0 +1,33 @@
+#container {
+    background-image: radial-gradient(#FFF0F3, #007E6E , #10002B);
+}
+
+#video-media {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+#buttons img {
+    margin: 50px;
+    max-width: 350px;
+    min-width: 130px;
+    padding: 20px;
+    border-radius: 50%;
+
+    background-image: radial-gradient(#FFF0F3, #007E6E , #10002B);
+}
+
+#buttons img:hover {
+    background-image: radial-gradient(#10002B, #007E6E , #FFF0F3);
+    box-shadow: 0 0 7px #FFF185;
+    transition: transform .2s;
+    transform: scale(1.2);
+}
