@@ -10,8 +10,6 @@ let muteBTN = document.querySelector('#mute');
 let descreaseVolumeBTN = document.querySelector('#decrease-volume');
 let increaseVolumeBTN = document.querySelector('#increase-volume');
 
-
-// let loopBTN = document.querySelector('#loop');
 let speedBTN = document.querySelector('#speed');
 let fullScreenBTN = document.querySelector('#full-screen');
 
@@ -76,7 +74,6 @@ muteBTN.addEventListener('click', muteVideo);
 descreaseVolumeBTN.addEventListener('click', descreaseVolume);
 increaseVolumeBTN.addEventListener('click', increaseVolume);
 
-// loopBTN.addEventListener('click', loopVideo);
 speedBTN.addEventListener('click', playbackRateChange);
 fullScreenBTN.addEventListener('click', fullScreenVideo);
 
