@@ -1,0 +1,34 @@
+header, footer {
+  background-color: #031828;
+}
+
+.container {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  width: 150px;
+}
+
+button {
+  width: fit-content;
+}
+
+#output {
+  max-width: 700px;
+  font-family: fantasy;
+  font-size: 20px;
+}
+
+span {
+  color: #971208;
+  text-shadow: 0 0 3px #d1bcf5;
+}
+
+img {
+  width: 450px;
+}
+
