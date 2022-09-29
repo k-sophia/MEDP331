@@ -11,10 +11,12 @@
     
 	<body>
         <header>
-            <h1 id="title">Web Development 2022</h1>
-            <h3 id="day-quote"></h3>
-            <button id="btn-quote" onclick="changeQuote()">Change Quote</button>
-        </header>
+            <div>
+                <h1 id="title">Web Development 2022</h1>
+                <h3 id="day-quote"></h3>
+                <button id="btn-quote" onclick="changeQuote()">Change Quote</button>
+            </div>
+      </header>
 
         <section class="container">
             <div id="assignments">
@@ -33,13 +35,15 @@
                 <a href="html/exercise-2.html">
                     <div class="assign-item micro">
                         <img src="img/micro-assign.png" alt="" class="micro-img">
+                        <p>Micro Assignments 2</p>
+                    </div>
+                </a>
+                <a href="html/assignment-2.html">
+                    <div class="assign-item macro">
+                        <img src="img/macro-assign.png" alt="" class="macro-img">
                         <p>Macro Assignments 2</p>
                     </div>
                 </a>
-                <div class="assign-item macro">
-                    <img src="img/macro-assign.png" alt="" class="macro-img">
-                    <p>Macro Assignments 2</p>
-                </div>
                 <div class="assign-item micro">
                     <img src="img/micro-assign.png" alt="" class="micro-img">
                     <p>Micro Assignments 3</p>
@@ -101,10 +105,12 @@
 
         <footer>
             <div>
-                <button id="btn-light" onclick="lightMode()">Light Mode</button>
-                <button id="btn-dark" onclick="darkMode()">Dark Mode</button>
+                <div>
+                    <button id="btn-light" onclick="lightMode()">Light Mode</button>
+                    <button id="btn-dark" onclick="darkMode()">Dark Mode</button>
+                </div>
+                <h3>© 2022 Kelly Camacho</h3>
             </div>
-            <h3>© 2022 Kelly Camacho</h3>
         </footer>
 	</body>
     <script type="text/javascript" src="scripts/design-mode.js"></script>

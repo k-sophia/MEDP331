@@ -82,76 +82,76 @@ fullScreenBTN.addEventListener('click', fullScreenVideo);
 /*********   First Row   *********/ 
 // Play
 function playHover() {
-    playBTN.src = '../img/witch-hat-hover.png';
+    playBTN.src = '../img/witch/witch-hat-hover.png';
 }
 
 function playOffHover() {
-    playBTN.src = '../img/witch-hat-off.png';
+    playBTN.src = '../img/witch/witch-hat-off.png';
 }
 
 // Pause
 function pauseHover() {
-    pauseBTN.src = '../img/witch-broom-hover.png';
+    pauseBTN.src = '../img/witch/witch-broom-hover.png';
 }
 
 function pauseOffHover() {
-    pauseBTN.src = '../img/witch-broom-off.png';
+    pauseBTN.src = '../img/witch/witch-broom-off.png';
 }
 
 // Stop
 function stopHover() {
-    stopBTN.src = '../img/witch-skull-hover.png';
+    stopBTN.src = '../img/witch/witch-skull-hover.png';
 }
 
 function stopOffHover() {
-    stopBTN.src = '../img/witch-skull-off.png';
+    stopBTN.src = '../img/witch/witch-skull-off.png';
 }
 
 /*********   Second Row   *********/ 
 
 // Mute
 function muteHover() {
-    muteBTN.src = '../img/witch-mortar-hover.png';
+    muteBTN.src = '../img/witch/witch-mortar-hover.png';
 }
 
 function muteOffHover() {
-    muteBTN.src = '../img/witch-mortar-off.png';
+    muteBTN.src = '../img/witch/witch-mortar-off.png';
 }
 
 // Decrease Volume
 function decreaseVolumeHover() {
-    descreaseVolumeBTN.src = '../img/witch-small-potion-hover.png';
+    descreaseVolumeBTN.src = '../img/witch/witch-small-potion-hover.png';
 }
 
 function decreaseVolumeOffHover() {
-    descreaseVolumeBTN.src = '../img/witch-small-potion-off.png';
+    descreaseVolumeBTN.src = '../img/witch/witch-small-potion-off.png';
 }
 
 // Increase Volume
 function increaseVolumeHover() {
-    increaseVolumeBTN.src = '../img/witch-large-potion-hover.png';
+    increaseVolumeBTN.src = '../img/witch/witch-large-potion-hover.png';
 }
 
 function increaseVolumeOffHover() {
-    increaseVolumeBTN.src = '../img/witch-large-potion-off.png';
+    increaseVolumeBTN.src = '../img/witch/witch-large-potion-off.png';
 }
 
 /*********   Third Row   *********/ 
 
 // Speed
 function speedHover() {
-    speedBTN.src = '../img/witch-bird-hover.png';
+    speedBTN.src = '../img/witch/witch-bird-hover.png';
 }
 
 function speedOffHover() {
-    speedBTN.src = '../img/witch-bird-off.png';
+    speedBTN.src = '../img/witch/witch-bird-off.png';
 }
 
 // Full Screen
 function fullScreenHover() {
-    fullScreenBTN.src = '../img/witch-magic-ball-hover.png';
+    fullScreenBTN.src = '../img/witch/witch-magic-ball-hover.png';
 }
 
 function fullScreenOffHover() {
-    fullScreenBTN.src = '../img/witch-magic-ball-off.png';
+    fullScreenBTN.src = '../img/witch/witch-magic-ball-off.png';
 }
