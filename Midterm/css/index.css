@@ -1,0 +1,207 @@
+body {
+    background-color: #111111;
+    background-image: url(../assets/chalk-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.img-link {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.coffee-link , .dessert-link , .home-link {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20%;
+    box-shadow: 
+        5px 5px 5px 0 black,
+        10px 10px 10px 0 black inset, 
+        -10px -10px 10px 0 black inset; 
+    margin: 10px;
+    z-index: 1;
+}
+
+.home-link {
+    width: 450px;
+    height: 100px;
+    background-image: url(../assets/home-link.png);
+}
+
+.coffee-link {
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/coffee-link.jpg);
+}
+
+.dessert-link {
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/dessert-link.jpg);
+}
+
+.coffee-link:hover , .dessert-link:hover , .home-link:hover {
+    box-shadow: 
+        2px 2px 5px 0 white,
+        -10px -10px 10px 0 black inset,
+        0 0 10px white; 
+}
+
+.html-content {
+    height: 85%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position:fixed;
+    margin: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 100px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    border-radius: 15px;
+    border: double !important;
+    border-color: aliceblue;
+}
+
+header, footer {
+    height: inherit;
+    margin-top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+#title , footer a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 100px;
+    margin: 20px;
+}
+
+.header-align a , footer p {
+    color: aliceblue;
+    font-size: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.header-align a:hover , footer a:hover{
+    color: #a6d4fc;
+}
+
+.container {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.img-quote {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.img-quote img {
+    width: 300px;
+    margin: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 50%;
+
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.img-quote p {
+    max-width: 500px;
+    margin: auto;
+    font-size: 33px;
+    line-height: 1.5;
+    text-shadow: 0 0 15px #d9b184;
+}
+
+@media (max-width: 1200px) {
+    .coffee-link , .dessert-link {
+        display: none
+    }
+}
+
+/* JavaScript Video */
+#video-section {
+    padding: 15px;
+    margin-bottom: 150px;
+}
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    flex-wrap: wrap;
+}
+
+.btn-circle {
+    /* background-color: black; */
+    box-shadow: 
+        5px 5px 5px 0 black,
+        10px 10px 10px 0 black inset, 
+        -10px -10px 10px 0 black inset; 
+
+    display: flex;
+    width: 60px;
+    height: 60px;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 25px;
+}
+
+.btn-circle:hover {
+    transition: transform .2s;
+    transform: scale(1.2);
+
+    box-shadow: 
+        2px 2px 5px 0 white,
+        -10px -10px 10px 0 black inset,
+        0 0 10px white; 
+}
+
+.btn-circle img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#volume-bar-container {
+    display: flex;
+    align-items: center;
+}
