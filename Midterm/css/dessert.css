@@ -1,0 +1,127 @@
+.link-1 {
+    background-image: url(../assets/home-link.png);
+}
+
+.link-2 {
+    background-image: url(../assets/coffee-link.png);
+}
+
+#dessert-search {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    min-height: 700px;
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#search-align {
+    margin: auto;
+}
+
+.section-title {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 50px;
+    color: #dadfd0;
+}
+
+.search-container {
+    margin: 20px;
+}
+
+#minCalories , #maxCalories {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#search {
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    color: #dadfd0;
+    background-color: #548089;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#search:hover {
+    color: #548089;
+    background-color: #dadfd0;
+}
+
+#card-align {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+#dessert-cards {
+    height: fit-content;
+    margin: auto;
+}
+
+.dessert-card {
+    border: double;
+    border-width: 10px;
+    border-color: #548089;
+    padding: 20px;
+    margin: 30px;
+    max-width: 700px;
+    height: fit-content;
+}
+
+.dessert-img {
+    width: 300px;
+}
+
+.dessert-title-div {
+    margin-top: 10px;
+}
+
+.dessert-title {
+    color: #faebd7;
+    text-decoration: none;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+}
+
+.dessert-title:hover {
+    color: #548089;
+    text-shadow: 1px 1px #faebd7;
+}
+
+.dessert-info {
+    color: #faebd7;
+    width: 350px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.dessert-ingredients {
+    color: #cdb18c;
+    width: 530px;
+    margin: auto;
+    line-height: 1.5;
+
+    display: flex;
+    justify-content: center;
+    /* flex: inline; */
+    flex-wrap: wrap;
+}
+
+.dessert-item {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: auto;
+}
+
+.dessert-intructions {
+    margin: 25px;
+}

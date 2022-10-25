@@ -1,0 +1,136 @@
+.link-1 {
+    background-image: url(../assets/home-link.png);
+}
+
+.link-2 {
+    background-image: url(../assets/dessert-link.png);
+}
+
+.section-title {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 45px !important;
+}
+
+/************************ Coffee Search ************************/
+
+#coffee-search {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: cover;
+    background-image: url(../assets/leaf-background.png);
+    color: #eeeef0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: inherit;
+    max-width: 500px;
+
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 50px;
+}
+
+#search-align {
+    background: radial-gradient(#000, #000,  #0000, #0000);
+    /* height: fit-content; */
+    width: 400px;
+    padding: 90px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#coffee-search h1 {
+    color: #a5b5a0;
+    text-shadow: 
+        1px 1px #faeddb;
+}
+
+#coffee-search h3 {
+    color: #faeddb;
+}
+
+#search {
+    background-color: #a5b5a0;
+    color: #eeeef0;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 3px;
+
+    border: 1.5px outset;
+    border-radius: 7px;
+}
+
+#search:hover {
+    background-color: #548089;
+}
+
+.search-example {
+    color: #f3d7a2 !important;
+}
+
+#coffee-items {
+    height: fit-content;
+    margin: auto;
+}
+
+/************************ Coffee List Cards ************************/
+
+#coffee-HC-container {
+    color: #f3d7a2;
+    height: fit-content;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 50px;
+}
+
+#coffee-HC-container button {
+    background-color: #6e5841;
+    color: #faeddb;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+    padding: 10px;
+
+    border: 1.5px outset;
+    border-radius: 20%;
+}
+
+#coffee-HC-container button:hover {
+    background-color: #3f2912;
+}
+
+#coffee-list {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.coffee-info-card {
+    background: radial-gradient(#000,#00000000);
+    border: 1.5px solid;
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+}
+
+.coffee-info-title {
+    color: #c3ad96;
+}
+
+.coffee-info-description {
+    color: #faeddb;
+    margin: 20px;
+}
