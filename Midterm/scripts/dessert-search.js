@@ -3,6 +3,7 @@ var search = document.getElementById('search');
 let minCalories = document.getElementById('minCalories');
 let maxCalories = document.getElementById('maxCalories');
 var dessertCards = document.getElementById('dessert-cards');
+var searchContainer = document.getElementById('dessert-search');
 
 var notFound = document.createElement('h3');
 notFound.className = "error-message";
@@ -84,6 +85,7 @@ function dessertRecipeDisplay(data) {
 
         title.textContent = dessert.title;
         title.href = dessert.sourceUrl;
+        title.target = "_blank";
         titleDiv.appendChild(title)
         card.append(titleDiv);
 
@@ -105,29 +107,71 @@ function dessertRecipeDisplay(data) {
         cardInfo.append(time);
         card.append(cardInfo);
 
+        var ingredientsBTN = document.createElement('button');
+        ingredientsBTN.className = "dessert-ingredients-btn";
+        ingredientsBTN.textContent = "see ingredients";
+        card.append(ingredientsBTN);
+        
+        var ingredients = document.createElement('div');
+        var newID = "dessert" + dessert.id;
+        ingredients.setAttribute('id', newID);
+        ingredients.classList.add('dessert-ingredients', 'modal');
+        var modalContent = document.createElement('div');
+        modalContent.className = "modal-content";
+        var ingredientsSpan = document.createElement('span');
+        ingredientsSpan.className = "close";
+        ingredientsSpan.innerHTML = "&times;";
+        var ingredientsTitle = document.createElement('h2');
+        ingredientsTitle.className = "dessert-ingredients-title";
+        ingredientsTitle.textContent = "ingredients";
+
+        modalContent.append(ingredientsSpan);
+        modalContent.append(ingredientsTitle);
+
+        // When the user clicks the button, open the modal 
+        ingredientsBTN.onclick = function() {
+            ingredients.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        ingredientsSpan.onclick = function() {
+            ingredients.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == ingredients) {
+            ingredients.style.display = "none";
+        }
+        }
+
         var intructions = document.createElement('div');
         intructions.className = "dessert-intructions";
-        var ingredients = document.createElement('div');
-        ingredients.className = "dessert-ingredients";
 
-        // let ingredients = [];
         let instructionsArray = dessert.analyzedInstructions[0].steps
+        let ingredientsArray = [];
         instructionsArray.forEach(step => {
             var temp = document.createElement('h4');
             temp.className = "dessert-step";
             temp.textContent = step.step;
 
             step.ingredients.forEach(item => {
-                var temp2 = document.createElement('h5');
-                temp2.className = "dessert-item";
-                temp2.textContent = item.name;
-                ingredients.append(temp2);
+                if(!ingredientsArray.includes(item.name)) {
+                    ingredientsArray.push(item.name);
+
+                    var temp2 = document.createElement('h5');
+                    temp2.className = "dessert-item";
+                    temp2.textContent = item.name;
+                    modalContent.append(temp2);
+                }
             });
 
             intructions.append(temp);
         });
 
+        ingredients.append(modalContent);
         card.append(ingredients);
+
         card.append(intructions);
 
         dessertCards.append(card);
@@ -138,3 +182,26 @@ function dessertRecipeDisplay(data) {
     }
 }
 
+/***********************************    Modal   ***********************************/ 
+// let infoBTN = document.querySelector('#info');
+// var modal = document.getElementById("myModal");
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks the button, open the modal 
+// infoBTN.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
