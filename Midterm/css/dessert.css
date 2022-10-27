@@ -39,7 +39,14 @@
 #search {
     margin-top: 15px;
     margin-bottom: 30px;
+}
 
+.dessert-ingredients-btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#search , .dessert-ingredients-btn {
     color: #dadfd0;
     background-color: #548089;
     border-radius: 15px;
@@ -48,7 +55,7 @@
     padding-right: 8px;
 }
 
-#search:hover {
+#search:hover , .dessert-ingredients-btn:hover {
     color: #548089;
     background-color: #dadfd0;
 }
@@ -106,11 +113,12 @@
 
 .dessert-ingredients {
     color: #cdb18c;
-    width: 530px;
+    max-width: 450px;
     margin: auto;
     line-height: 1.5;
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     /* flex: inline; */
     flex-wrap: wrap;
@@ -119,9 +127,50 @@
 .dessert-item {
     padding-left: 12px;
     padding-right: 12px;
-    margin: auto;
+    margin: 0;
 }
 
 .dessert-intructions {
     margin: 25px;
+}
+
+.modal {
+    border: solid;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0;
+    top: 0;
+    min-width: 100%; /* Full width */
+    min-height: 100%; /* Full height */
+    margin: auto;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #000000; /* Fallback color */
+    background-color: #00000066; /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #cdb18c;
+    color: #3e3635;
+    border-radius: 15px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #3e3635;
+    width: 300px;
+    height: 300px;
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.close {
+    color: #eeeef0;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #407084;
+    text-decoration: none;
+    cursor: pointer;
 }
