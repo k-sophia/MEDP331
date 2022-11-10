@@ -1,0 +1,63 @@
+#convert-container {
+	background-color: #cfdfff;
+    height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#align-fix {
+    margin: 50px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+form {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+input {
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#submit {
+    background-color: #75d0fa;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+}
+
+#submit:hover {
+    background-color: #10002b;
+    color: #75d0fa;
+}
+
+.color-box {
+    background-color: #000;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+}
+
+.output {
+    padding: 10px;
+    word-spacing: 15px;
+    font-size: 20px;
+    color: #10002b;
+    text-shadow: 0 0 5px #75d0fa;
+}
