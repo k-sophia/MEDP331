@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/exercise-4.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/exercise-4.css">
+	<link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/style.css">
 	<title>PHP Practice</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 
 	<footer>
 		<div>
-			<a class='footer-link' href='../index.html'>Home Page</a>
+		<a class='footer-link' href='https://k-sophia.github.io/MEDP331/index.html'>Home Page</a>
 			<h3>© 2022 Kelly Camacho</h3>
 		</div>
 	</footer>
