@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/assignment-3.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>PHP Conversion</title>
+</head>
+<body>
+
+	<header>
+		<h1 id='title'>Web Development 2022</h1>
+	</header>
+
+    <div id="convert-container">
+        <div id="align-fix">
+            <h2>PHP Color Converter</h2>
+            <form method="post">
+                <input type="color" id="color" name="color" required>
+                <input id="submit" type="submit" value="Convert!">
+            </form>
+            <div id="answer"></div>
+        </div>
+    </div>
+
+	<footer>
+		<div>
+			<a class='footer-link' href='https://k-sophia.github.io/MEDP331/index.html'>Home Page</a>
+			<h3>© 2022 Kelly Camacho</h3>
+		</div>
+	</footer>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#my_form_id').on('submit', function(e){
+                //Stop the form from submitting itself to the server.
+                e.preventDefault();
+                var color = $('#color').val();
+                $.ajax({
+                    type: "POST",
+                    url: 'assignment-3.php',
+                    data: {color: color},
+                    success: function(data){
+                        // alert(data);
+                        $( "#answer" ).append(data);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
