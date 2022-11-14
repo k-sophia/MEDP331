@@ -48,28 +48,20 @@
                 ];
                 var temp = new Date();
                 var date = monthNames[temp.getMonth()] + " " + temp.getDate() + " " + temp.getFullYear();
-
-                var daysList = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
                 var dayOfWeek = $('#dayOfWeek').val().toLowerCase();
-                if(daysList.includes(dayOfWeek)) {
-                    $.ajax({
-                        type: "POST",
-                        url: 'assignment-4.php',
-                        data: {
-                            date: date,
-                            dayOfWeek: dayOfWeek
-                        },
-                        success: function(data){
-                            // alert(data);
-                            $( "#planner" ).empty();
-                            $( "#planner" ).append(data);
-                        },
-                    });
-                }
-                else {
-                    $( "#planner" ).empty();
-                    $( "#planner" ).append('Enter Valid Week Day');
-                }
+                $.ajax({
+                    type: "POST",
+                    url: 'assignment-4.php',
+                    data: {
+                        date: date,
+                        dayOfWeek: dayOfWeek
+                    },
+                    success: function(data){
+                        // alert(data);
+                        $( "#planner" ).empty();
+                        $( "#planner" ).append(data);
+                    },
+                });
                 
             });
         });
