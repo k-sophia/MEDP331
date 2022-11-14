@@ -83,6 +83,7 @@ a:hover {
     border-radius: 15px;
     border: solid;
     border-color: #393839;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 p {
