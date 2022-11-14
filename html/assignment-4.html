@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/assignment-4.css">
+	<link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/assignment-4.css">
 	<link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/style.css">
 	<title>PHP Daily Planner</title>
 </head>
@@ -21,43 +21,12 @@
     <div id="planner-container">
         <div id="align-fix">
             <h1>PHP Daily Planner</h1>
+            <h3>Day of the Week</h3>
             <form id="form" method="post">
-                <h3>Day of the Week</h3>
                 <input type="string" id="dayOfWeek" name="dayOfWeek" required>
                 <input id="submit" type="submit" value="planner">
             </form>
-            <div id="planner">
-                <!-- <h3 id="date">DATE: November 13, 2022</h3>
-                <h3 id="dayOfWeek">Monday Schedule</h3>
-                <div id="day-plan">
-                    <div id="goal-container" class="container">
-                        <h3>GOAL FOR TODAY</h3>
-                        <p>goal goal goal goal goal goal goal goal</p>
-                    </div>
-                    <div id="urgent-container" class="container">
-                        <h3>URGENT</h3>
-                        <p>urgent urgent urgent urgent urgent urgent urgent </p>
-                    </div>
-                    <div id="tasks-container" class="container">
-                        <h3>TASK LIST</h3>
-                        <ul>
-                            <li>task</li>
-                            <li>task</li>
-                            <li>task</li>
-                            <li>task</li>
-                            <li>task</li>
-                        </ul>
-                    </div>
-                    <div id="appointments-container" class="container">
-                        <h3>APPOINTMENTS</h3>
-                        <p>appointments appointments appointments appointments appointments</p>
-                    </div>
-                    <div id="notes-container" class="container">
-                        <h3>NOTES</h3>
-                        <p>notes notes notes notes notes notes notes notes notes</p>
-                    </div>
-                </div> -->
-            </div>
+            <div id="planner"></div>
         </div>
     </div>
 
@@ -68,14 +37,20 @@
 		</div>
 	</footer>
 
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#form').on('submit', function(e){
                 //Stop the form from submitting itself to the server.
                 e.preventDefault();
-                var date = $.datepicker.formatDate('dd M yy', new Date());
-                var dayOfWeek = $('#dayOfWeek').val().toLowerCase();
+                var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                ];
+                var temp = new Date();
+                var date = monthNames[temp.getMonth()] + " " + temp.getDate() + " " + temp.getFullYear();
+
                 var daysList = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+                var dayOfWeek = $('#dayOfWeek').val().toLowerCase();
                 if(daysList.includes(dayOfWeek)) {
                     $.ajax({
                         type: "POST",

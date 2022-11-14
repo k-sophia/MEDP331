@@ -7,7 +7,17 @@
         $dayOfWeek = $_POST['dayOfWeek'];
     }
 
-    if($dayOfWeek == 'Monday') {
+    $goal = '';
+    $urgent = '';
+    $task1 = '';
+    $task2 = '';
+    $task3 = '';
+    $task4 = '';
+    $task5 = '';
+    $appointments = '';
+    $notes = '';
+
+    if($dayOfWeek == 'monday') {
         $goal = 'get a head start on weeks assignments';
         $urgent = 'project due TOMORROW T^T';
         $task1 = 'math hw';
