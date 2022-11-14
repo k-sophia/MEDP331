@@ -1,0 +1,95 @@
+body, footer, header {
+    background-color: #ffefde !important;
+    color: #393839 !important;
+}
+
+.footer-link, #title {
+    color: #393839 !important;
+    text-shadow: 1px 1px 3px #f9b15f !important;
+}
+
+.footer-link:hover {
+    color: #f9b15f;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #f9b15f !important;
+    text-shadow: 2px 2px 8px #fff7ee !important;
+}
+
+
+#planner-container {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    font-family: 'Gaegu', cursive;
+}
+
+#align-fix {
+    margin: 50px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.container h3 {
+    text-align: center;
+    font-size: 22px;
+    
+}
+
+#date, #dayOfWeek {
+    text-align: center;
+    font-size: 27px;
+}
+
+#day-plan {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.container {
+    margin: 50px;
+    padding: 15px;
+    height: fit-content;
+}
+
+p {
+    text-shadow: none !important;
+    color: #393839 !important;
+    font-size: 17px !important;
+    text-align: start;
+}
+
+#goal-container {
+    background-color: #ffe1ae !important;
+    max-width: 500px;
+}
+
+#urgent-container {
+    background-color: #fffdfa !important;
+    max-width: 300px;
+}
+
+#tasks-container {
+    background-color: #fffdfa !important;
+    max-width: 600px;
+}
+
+#appointments-container {
+    background-color: #fff7ee !important;
+    max-width: 350px;
+}
+
+#notes-container {
+    background-color: #c2e5de !important;
+    width: 70%;
+}
