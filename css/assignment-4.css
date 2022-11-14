@@ -18,6 +18,26 @@ a:hover {
     text-shadow: 2px 2px 8px #fff7ee !important;
 }
 
+#form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#submit {
+    background-color: #f9b15f;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+}
+
+#submit:hover {
+    background-color: #393839;
+    color: #f9b15f;
+}
 
 #planner-container {
     min-height: 75vh;
