@@ -124,9 +124,13 @@ p {
     width: 70%;
 }
 
+.img-container {
+    margin-top: 15px;
+}
+
 .day-img {
     height: 300px;
-    width: 300pc;
+    width: 300px;
     border-radius: 50%;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
