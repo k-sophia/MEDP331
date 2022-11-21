@@ -131,6 +131,8 @@ p {
 .day-img {
     height: 300px;
     width: 300px;
-    border-radius: 50% !important;
+    border-radius: 15px !important;
+    border: solid;
+    border-color: #393839;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
