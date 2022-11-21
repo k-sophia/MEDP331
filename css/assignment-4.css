@@ -129,8 +129,8 @@ p {
 }
 
 .day-img {
-    height: 300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
     border-radius: 15px !important;
     border: solid;
     border-color: #393839;
