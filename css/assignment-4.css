@@ -28,7 +28,7 @@ a:hover {
 #submit {
     background-color: #f9b15f;
     font-weight: bold;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
     border: none;
     border-radius: 15px;
@@ -96,26 +96,37 @@ p {
 
 #goal-container {
     background-color: #ffe1ae !important;
+    min-width: 300px;
     max-width: 500px;
 }
 
 #urgent-container {
     background-color: #fffdfa !important;
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 350px;
 }
 
 #tasks-container {
     background-color: #fffdfa !important;
+    min-width: 300px;
     max-width: 600px;
     text-align: start;
 }
 
 #appointments-container {
     background-color: #fff7ee !important;
+    min-width: 300px;
     max-width: 350px;
 }
 
 #notes-container {
     background-color: #c2e5de !important;
     width: 70%;
+}
+
+.day-img {
+    height: 300px;
+    width: 300pc;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
