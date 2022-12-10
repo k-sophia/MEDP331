@@ -1,5 +1,7 @@
 <?php
-    $symbol = $_GET['symbol'];
+    if(isset($_POST['symbol'])){
+        $symbol = $_POST['symbol'];
+    }
 
     $servername = "localhost:3308"; // swiss server designated localhost
     $username = "dev05dbuser"; // database dev02dbuser,dev03dbuser, etc.

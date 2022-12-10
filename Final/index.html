@@ -14,7 +14,7 @@
     <body>
 
         <div>
-            <form>
+            <form id="form" method="post">
                 <select id="symbol" name="symbol">
                     <option value="">Select a Symbol:</option>
                     <option value="love">love</option>
@@ -22,7 +22,7 @@
                     <option value="pride">pride</option>
                     <option value="purity">purity</option>
                 </select>
-                <input id="submit" type="submit" value="planner" onclick="getData()">
+                <input id="submit" type="submit">
             </form>
             <br>
             <div id="database"><b>Flower info will be listed here...</b></div>
@@ -37,29 +37,25 @@
 
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>
-            function getData() {
-                var symbol = document.getElementById("symbol").value;
-                var databse = document.getElementById("database").innerHTML;
-                if (symbol == "") {
-                    databse = "";
-                    return;
-                } else { 
-                    if (window.XMLHttpRequest) {
-                        // code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp = new XMLHttpRequest();
-                    } else {
-                        // code for IE6, IE5
-                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            databse = this.responseText;
+
+
+            $(document).ready(function(){
+                $('#form').on('submit', function(e){
+                    //Stop the form from submitting itself to the server.
+                    e.preventDefault();
+                    var symbol = $('#symbol').val();
+                    $.ajax({
+                        type: "POST",
+                        url: 'connection_test.php',
+                        data: {symbol: symbol},
+                        success: function(data){
+                            // alert(data);
+                            $( "#database" ).empty();
+                            $( "#database" ).append(data);
                         }
-                    };
-                    xmlhttp.open("GET","connection_test.php?symbol="+symbol,true);
-                    xmlhttp.send();
-                }
-            }
+                    });
+                });
+            });
         </script>
     </body>
 </html>
