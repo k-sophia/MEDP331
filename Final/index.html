@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Finak/css/index.css">
+        <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/index.css">
         <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/style.css">
         <title>Final Website</title>
     </head>
@@ -15,16 +15,17 @@
 
         <div>
             <form>
-                <select name="users" onchange="showUser(this.value)">
+                <select id="symbol" name="symbol">
                     <option value="">Select a Symbol:</option>
                     <option value="love">love</option>
                     <option value="death">death</option>
                     <option value="pride">pride</option>
                     <option value="purity">purity</option>
                 </select>
+                <input id="submit" type="submit" value="planner" onclick="getData()">
             </form>
             <br>
-            <div id="txtHint"><b>Flower info will be listed here...</b></div>
+            <div id="database"><b>Flower info will be listed here...</b></div>
         </div>
         
         <footer>
@@ -36,9 +37,11 @@
 
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>
-            function showUser(str) {
-                if (str == "") {
-                    document.getElementById("txtHint").innerHTML = "";
+            function getData() {
+                var symbol = document.getElementById("symbol").value;
+                var databse = document.getElementById("database").innerHTML;
+                if (symbol == "") {
+                    databse = "";
                     return;
                 } else { 
                     if (window.XMLHttpRequest) {
@@ -50,10 +53,10 @@
                     }
                     xmlhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
-                            document.getElementById("txtHint").innerHTML = this.responseText;
+                            databse = this.responseText;
                         }
                     };
-                    xmlhttp.open("GET","connection_test.php?q="+str,true);
+                    xmlhttp.open("GET","connection_test.php?symbol="+symbol,true);
                     xmlhttp.send();
                 }
             }
