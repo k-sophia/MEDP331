@@ -2,6 +2,10 @@
     margin: 50px;
 }
 
+#form {
+    margin: auto;
+}
+
 table {
     width: 90%;
     border-collapse: collapse;
