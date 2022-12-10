@@ -22,3 +22,8 @@ td, th {
     max-width: 200px;
     text-align: center;
 }
+
+.data-img {
+    height: 400px;
+    width: auto;
+}

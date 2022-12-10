@@ -41,7 +41,7 @@
         $season = explode(",", $row['season']);
         $sun = explode(",", $row['sun']);
         $soil = explode(",", $row['soil']);
-        $image = "<img src=" . $row["img"] . " height='150' width='auto'" .">";
+        $image = "<img src=" . $row["img"] . "class='data-img'" . ">";
 
         echo "<tr>";
         echo "<td>" . $row['names'] . "</td>";
