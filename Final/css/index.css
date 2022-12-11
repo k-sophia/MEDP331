@@ -39,7 +39,7 @@ table {
 
 table, td, th {
     border: 1px solid #184E77;
-    color: #34A0A4;
+    color: #184E77;
     padding: 5px;
 }
 
@@ -62,7 +62,7 @@ tr:nth-child(even) {
 
 tr:hover {
 	background-color: #184E77;
-    color: #F0F3BD;
+    color: #B5E48C !important;
 }
 
 .data-img {

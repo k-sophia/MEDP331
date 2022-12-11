@@ -53,7 +53,7 @@
         exit();
     }
 
-    echo "<table>
+    echo "<table style='max-width:900px'>
     <tr>
     $col_th
     </tr>";
