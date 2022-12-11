@@ -9,6 +9,18 @@
     padding: 15px;
 }
 
+#col-check {
+    display: flex; 
+    align-items: center; 
+    align-content:center; 
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#col-check label {
+    margin: 15px;
+}
+
 #submit {
     display: block;
     margin: auto;
