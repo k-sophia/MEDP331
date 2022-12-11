@@ -31,8 +31,8 @@
         $columns .= ", $value";
         $col_th .= "<th>$value</th>";
     }
-    
-    $where = "WHERE ";
+
+    $where = "";
 
     if($symbol != "") {
         $where .= "symbolism like " . "'%$symbol%'";
@@ -47,14 +47,20 @@
     }
 
     // echo $where;
-    $sql = "SELECT $columns FROM flowers $where";
+    $sql = "SELECT $columns FROM flowers";
+    if($where != "") {
+        $sql .= " WHERE " . $where;
+    }
+
     $result = mysqli_query($con,$sql);
     if (!$result) {
         printf("Error: %s\n", mysqli_error($con));
         exit();
     }
 
-    echo "<table style='max-width:900px'>
+    $length = 200 + (count($cols) * 130);
+    echo $length;
+    echo "<table style='max-width:" . $length . "px; line-height: 32px;'>
     <tr>
     $col_th
     </tr>";

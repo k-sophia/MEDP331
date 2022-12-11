@@ -21,9 +21,21 @@
     margin: 15px;
 }
 
+#symbol, #season {
+    margin: 15px;
+}
+
 #submit {
+    background-color: #184E77; 
+    color: #fff;
+
+    font-family: 'Gamja Flower', cursive; 
+    font-size: 15px; 
+
     display: block;
     margin: auto;
+    border-radius: 20px; 
+    padding:10px; 
 }
 
 #database {
@@ -44,7 +56,7 @@ table, td, th {
 }
 
 td, th {
-    max-width: 200px;
+    max-width: 200px !important;
     text-align: center;
     margin: auto;
     padding: 10px;
@@ -57,11 +69,11 @@ th {
 }
 
 tr:nth-child(even) {
-	background-color: #5251743c;
+    background-color: #5251743c;
 }
 
 tr:hover {
-	background-color: #184E77;
+    background-color: #184E77;
     color: #B5E48C !important;
 }
 
