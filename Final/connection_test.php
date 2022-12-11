@@ -23,8 +23,12 @@
     }
 
     // sql query
+    $columns = "names";
+    $col_th = "<th>name</th>";
     foreach ($cols as $value) {
         echo "$value <br>";
+        $columns .= ", $value";
+        $col_th .= "<th>$value</th>";
     }
 
     $where = "WHERE ";
@@ -42,7 +46,7 @@
     }
 
     // echo $where;
-    $sql = "SELECT * FROM flowers $where";
+    $sql = "SELECT $columns FROM flowers $where";
     $result = mysqli_query($con,$sql);
     if (!$result) {
         printf("Error: %s\n", mysqli_error($con));
@@ -51,56 +55,63 @@
 
     echo "<table>
     <tr>
-    <th>name</th>
-    <th>common names</th>
-    <th>image</th>
-    <th>symbolysm</th>
-    <th>season</th>
-    <th>maintenance</th>
-    <th>water</th>
-    <th>sun</th>
-    <th>soil</th>
+    $col_th
     </tr>";
     
     while($row = mysqli_fetch_array($result)) {
-        $common = explode(",", $row['common_names']);
-        $season = explode(",", $row['season']);
-        $sun = explode(",", $row['sun']);
-        $soil = explode(",", $row['soil']);
-        $image = "<img src=" . $row["img"] . "class='data-img'" . ">";
+        // $common = explode(",", $row['common_names']);
+        // $season = explode(",", $row['season']);
+        // $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
+
+        // echo "<tr>";
+        // echo "<td>" . $row['names'] . "</td>";
+
+        // echo "<td>";
+        // foreach($common as $value){
+        //     echo $value . "<br>";
+        // }
+        // echo "</td>";
+        
+        // echo "<td>" . $image . "</td>";
+        // echo "<td>" . $row['symbolism'] . "</td>";
+
+        // echo "<td>";
+        // foreach($season as $value){
+        //     echo $value . "<br>";
+        // }
+        // echo "</td>";
+
+        // echo "</tr>";
 
         echo "<tr>";
         echo "<td>" . $row['names'] . "</td>";
 
-        echo "<td>";
-        foreach($common as $value){
-            echo $value . "<br>";
+        if(in_array("common_names", $cols)) {
+            $common = explode(",", $row['common_names']);
+            echo "<td>";
+            foreach($common as $value){
+                echo $value . "<br>";
+            }
+            echo "</td>";
         }
-        echo "</td>";
-        
-        echo "<td>" . $image . "</td>";
-        echo "<td>" . $row['symbolism'] . "</td>";
 
-        echo "<td>";
-        foreach($season as $value){
-            echo $value . "<br>";
+        if(in_array("img", $cols)) {
+            $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
+            echo "<td>" . $image . "</td>";
         }
-        echo "</td>";
-        
-        echo "<td>" . $row['maintenance'] . "</td>";
-        echo "<td>" . $row['water'] . "</td>";
 
-        echo "<td>";
-        foreach($sun as $value){
-            echo $value . "<br>";
+        if(in_array("symbolism", $cols)) {
+            echo "<td>" . $row['symbolism'] . "</td>";
         }
-        echo "</td>";
 
-        echo "<td>";
-        foreach($soil as $value){
-            echo $value . "<br>";
+        if(in_array("season", $cols)) {
+            $season = explode(",", $row['season']);
+            echo "<td>";
+            foreach($season as $value){
+                echo $value . "<br>";
+            }
+            echo "</td>";
         }
-        echo "</td>";
 
         echo "</tr>";
     }
