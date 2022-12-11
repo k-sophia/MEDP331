@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
@@ -21,6 +21,13 @@
                     <option value="death">death</option>
                     <option value="pride">pride</option>
                     <option value="purity">purity</option>
+                </select>
+                <select id="season" name="season">
+                    <option value="">Select a Season:</option>
+                    <option value="spring">spring</option>
+                    <option value="summer">summer</option>
+                    <option value="autumn">autumn</option>
+                    <option value="winter">winter</option>
                 </select>
                 <input id="submit" type="submit">
             </form>
@@ -44,10 +51,14 @@
                     //Stop the form from submitting itself to the server.
                     e.preventDefault();
                     var symbol = $('#symbol').val();
+                    var season = $('#season').val();
                     $.ajax({
                         type: "POST",
                         url: 'connection_test.php',
-                        data: {symbol: symbol},
+                        data: {
+                            symbol: symbol,
+                            season: season
+                        },
                         success: function(data){
                             // alert(data);
                             $( "#database" ).empty();

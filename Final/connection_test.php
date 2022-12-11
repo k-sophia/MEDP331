@@ -3,6 +3,10 @@
         $symbol = $_POST['symbol'];
     }
 
+    if(isset($_POST['season'])){
+        $season = $_POST['season'];
+    }
+
     $servername = "localhost:3308"; // swiss server designated localhost
     $username = "dev05dbuser"; // database dev02dbuser,dev03dbuser, etc.
     $password = "MmnCVtfx51YiO5pQ"; // password for your database FM02web2020,FM03web2020, etc.
@@ -14,9 +18,22 @@
         die('Could not connect: ' . mysqli_error($con));
     }
 
-    // mysqli_select_db($con,"flowers")
-    $symbol = "'%$symbol%'";
-    $sql = "SELECT * FROM flowers WHERE symbolism like $symbol";
+    // sql query
+    $where = "WHERE "
+
+    if($symbol != "") {
+        $where .= "symbolism like " . "%$symbol%";
+    }
+
+    if($symbol != "" && $season != "") {
+        $where .= " AND season = " . $season;
+    }
+
+    if($symbol == "" && $season != "") {
+        $where .= "season = " . $season;
+    }
+    
+    $sql = "SELECT * FROM flowers $where";
     $result = mysqli_query($con,$sql);
     if (!$result) {
         printf("Error: %s\n", mysqli_error($con));
