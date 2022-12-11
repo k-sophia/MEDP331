@@ -8,13 +8,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/index.css">
-        <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/css/style.css">
+        <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/style.css">
         <title>Final Website</title>
     </head>
     <body>
 
         <div id="form-data">
             <form id="form" method="post">
+                <div id="col-check" style="display: inline;">
+                    <label for="checkbox1">
+                        common names
+                        <input id="checkbox1" name="mycheckboxs" type="checkbox"  checked="true" value="common_names"/>
+                    </label><br/>
+                    <label for="checkbox2">
+                        image
+                        <input id="checkbox2" name="mycheckboxs" type="checkbox" checked="true" value="img"/>
+                    </label><br/>
+                    <label for="checkbox3">
+                        symbolysm
+                        <input id="checkbox3" name="mycheckboxs" type="checkbox" checked="true"  value="symbolysm"/>
+                    </label><br/>
+                    <label for="checkbox4">
+                        season
+                        <input id="checkbox4" name="mycheckboxs" type="checkbox" checked="true" value="season"/>
+                    </label><br/>
+                </div>
                 <select id="symbol" name="symbol">
                     <option value="">Select a Symbol:</option>
                     <option value="love">love</option>
@@ -50,12 +68,17 @@
                 $('#form').on('submit', function(e){
                     //Stop the form from submitting itself to the server.
                     e.preventDefault();
+                    const data = new FormData(e.target);
+                    console.log(data.getAll("mycheckboxs"))
+                    var cols = data.getAll("mycheckboxs");
+
                     var symbol = $('#symbol').val();
                     var season = $('#season').val();
                     $.ajax({
                         type: "POST",
                         url: 'connection_test.php',
                         data: {
+                            cols: cols,
                             symbol: symbol,
                             season: season
                         },

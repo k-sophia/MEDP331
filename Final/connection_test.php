@@ -1,4 +1,8 @@
 <?php
+    if(isset($_POST['cols'])){
+        $cols = $_POST['cols'];
+    }
+
     if(isset($_POST['symbol'])){
         $symbol = $_POST['symbol'];
     }
@@ -19,8 +23,11 @@
     }
 
     // sql query
+    foreach ($cols as $value) {
+        echo "$value <br>";
+    }
+
     $where = "WHERE ";
-    echo $where;
 
     if($symbol != "") {
         $where .= "symbolism like " . "'%$symbol%'";
@@ -33,7 +40,8 @@
     if($symbol == "" && $season != "") {
         $where .= "season like " . "'%$season%'";
     }
-    echo $where;
+
+    // echo $where;
     $sql = "SELECT * FROM flowers $where";
     $result = mysqli_query($con,$sql);
     if (!$result) {
