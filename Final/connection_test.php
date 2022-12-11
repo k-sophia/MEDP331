@@ -23,14 +23,15 @@
     }
 
     // sql query
-    $columns = "names";
-    $col_th = "<th>name</th>";
+    $columns = "img, names";
+    $col_th = "
+        <th>image</th>
+        <th>name</th>";
     foreach ($cols as $value) {
-        echo "$value <br>";
         $columns .= ", $value";
         $col_th .= "<th>$value</th>";
     }
-
+    
     $where = "WHERE ";
 
     if($symbol != "") {
@@ -59,31 +60,11 @@
     </tr>";
     
     while($row = mysqli_fetch_array($result)) {
-        // $common = explode(",", $row['common_names']);
-        // $season = explode(",", $row['season']);
-        // $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
-
-        // echo "<tr>";
-        // echo "<td>" . $row['names'] . "</td>";
-
-        // echo "<td>";
-        // foreach($common as $value){
-        //     echo $value . "<br>";
-        // }
-        // echo "</td>";
-        
-        // echo "<td>" . $image . "</td>";
-        // echo "<td>" . $row['symbolism'] . "</td>";
-
-        // echo "<td>";
-        // foreach($season as $value){
-        //     echo $value . "<br>";
-        // }
-        // echo "</td>";
-
-        // echo "</tr>";
-
         echo "<tr>";
+
+        $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
+        echo "<td>" . $image . "</td>";
+
         echo "<td>" . $row['names'] . "</td>";
 
         if(in_array("common_names", $cols)) {
@@ -95,11 +76,6 @@
             echo "</td>";
         }
 
-        if(in_array("img", $cols)) {
-            $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
-            echo "<td>" . $image . "</td>";
-        }
-
         if(in_array("symbolism", $cols)) {
             echo "<td>" . $row['symbolism'] . "</td>";
         }
@@ -108,6 +84,32 @@
             $season = explode(",", $row['season']);
             echo "<td>";
             foreach($season as $value){
+                echo $value . "<br>";
+            }
+            echo "</td>";
+        }
+
+        if(in_array("maintenance", $cols)) {
+            echo "<td>" . $row['maintenance'] . "</td>";
+        }
+
+        if(in_array("water", $cols)) {
+            echo "<td>" . $row['water'] . "</td>";
+        }
+
+        if(in_array("sun", $cols)) {
+            $sun = explode(",", $row['sun']);
+            echo "<td>";
+            foreach($sun as $value){
+                echo $value . "<br>";
+            }
+            echo "</td>";
+        }
+
+        if(in_array("soil", $cols)) {
+            $soil = explode(",", $row['soil']);
+            echo "<td>";
+            foreach($soil as $value){
                 echo $value . "<br>";
             }
             echo "</td>";

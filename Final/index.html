@@ -21,17 +21,29 @@
                         <input id="checkbox1" name="mycheckboxs" type="checkbox"  checked="true" value="common_names"/>
                     </label><br/>
                     <label for="checkbox2">
-                        image
-                        <input id="checkbox2" name="mycheckboxs" type="checkbox" checked="true" value="img"/>
+                        symbolism
+                        <input id="checkbox2" name="mycheckboxs" type="checkbox" checked="true"  value="symbolism"/>
                     </label><br/>
                     <label for="checkbox3">
-                        symbolism
-                        <input id="checkbox3" name="mycheckboxs" type="checkbox" checked="true"  value="symbolism"/>
+                        season
+                        <input id="checkbox3" name="mycheckboxs" type="checkbox" checked="true" value="season"/>
                     </label><br/>
                     <label for="checkbox4">
-                        season
-                        <input id="checkbox4" name="mycheckboxs" type="checkbox" checked="true" value="season"/>
+                        maintenance
+                        <input id="checkbox4" name="mycheckboxs" type="checkbox" checked="true" value="maintenance"/>
                     </label><br/>
+                    <label for="checkbox5">
+                        water
+                        <input id="checkbox5" name="mycheckboxs" type="checkbox" checked="true" value="water"/>
+                    </label>
+                    <label for="checkbox6">
+                        sun
+                        <input id="checkbox6" name="mycheckboxs" type="checkbox" checked="true" value="sun"/>
+                    </label>
+                    <label for="checkbox7">
+                        soil
+                        <input id="checkbox7" name="mycheckboxs" type="checkbox" checked="true" value="soil"/>
+                    </label>
                 </div>
                 <select id="symbol" name="symbol">
                     <option value="">Select a Symbol:</option>
@@ -69,7 +81,6 @@
                     //Stop the form from submitting itself to the server.
                     e.preventDefault();
                     const data = new FormData(e.target);
-                    console.log(data.getAll("mycheckboxs"))
                     var cols = data.getAll("mycheckboxs");
 
                     var symbol = $('#symbol').val();
