@@ -51,6 +51,7 @@
     if($where != "") {
         $sql .= " WHERE " . $where;
     }
+    $sql .= " ORDER BY names";
 
     $result = mysqli_query($con,$sql);
     if (!$result) {
@@ -58,8 +59,8 @@
         exit();
     }
 
-    $length = 200 + (count($cols) * 130);
-    echo $length;
+    $length = 200 + (count($cols) * 150);
+    // echo $length;
     echo "<table style='max-width:" . $length . "px; line-height: 32px;'>
     <tr>
     $col_th

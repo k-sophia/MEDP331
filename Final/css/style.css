@@ -1,3 +1,20 @@
 body {
     background-color: #00A8963c;
 }
+
+footer {
+    display: flex; justify-content:center; 
+    align-content:center; 
+    text-align:center; 
+    font-family: 'Gamja Flower', cursive; 
+    font-size: 25px;
+}
+
+.footer-link {
+    text-decoration: none; 
+    color: #184E77;
+}
+
+.footer-link:hover {
+    color: #513B56;
+}
