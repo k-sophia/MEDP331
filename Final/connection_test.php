@@ -19,20 +19,21 @@
     }
 
     // sql query
-    $where = "WHERE "
+    $where = "WHERE ";
+    echo $where;
 
     if($symbol != "") {
-        $where .= "symbolism like " . "%$symbol%";
+        $where .= "symbolism like " . "'%$symbol%'";
     }
 
     if($symbol != "" && $season != "") {
-        $where .= " AND season = " . $season;
+        $where .= " AND season like " . "'%$season%'";
     }
 
     if($symbol == "" && $season != "") {
-        $where .= "season = " . $season;
+        $where .= "season like " . "'%$season%'";
     }
-    
+    echo $where;
     $sql = "SELECT * FROM flowers $where";
     $result = mysqli_query($con,$sql);
     if (!$result) {

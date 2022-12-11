@@ -10,6 +10,7 @@ body {
 #form {
     text-align: center;
     margin: auto;
+    padding: 15px;
 }
 
 #submit {
@@ -43,8 +44,8 @@ td, th {
 
 th {
     font-family: 'Gamja Flower', cursive;
-    height: 50px;
-    font-size: 30px;;
+    height: 55px;
+    font-size: 25px;
 }
 
 tr:nth-child(even) {
@@ -53,10 +54,10 @@ tr:nth-child(even) {
 
 tr:hover {
 	background-color: #184E77;
-    color: #B5E48C;
+    color: #F0F3BD;
 }
 
 .data-img {
-    max-height: 600px;
+    height: 600px;
     width: auto;
 }
