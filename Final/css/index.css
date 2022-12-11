@@ -8,23 +8,51 @@
     margin: auto;
 }
 
+#submit {
+    display: block;
+    margin: auto;
+}
+
+#database {
+    overflow-x:auto;
+}
+
 table {
     width: 90%;
     border-collapse: collapse;
     margin: auto;
+    border-radius: 30px;
 }
 
 table, td, th {
-    border: 1px solid black;
+    border: 1px solid #184E77;
+    color: #34A0A4;
     padding: 5px;
 }
 
 td, th {
     max-width: 200px;
     text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+th {
+    font-family: 'Gamja Flower', cursive;
+    height: 50px;
+}
+
+tr:nth-child(even) {
+	background-color: #5251743c;
+}
+
+tr:hover {
+	background-color: #184E77;
+    color: #B5E48C;
+    text-shadow: 0 0 5px #D9ED92;
 }
 
 .data-img {
-    height: 400px;
+    max-height: 600px;
     width: auto;
 }
