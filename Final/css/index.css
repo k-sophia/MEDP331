@@ -1,4 +1,5 @@
 #form-data {
+    font-family: 'Gamja Flower', cursive; 
     margin: 50px;
     text-align: center;
 }
@@ -26,16 +27,21 @@
 }
 
 #submit {
-    background-color: #184E77; 
-    color: #fff;
+    color: #FFF;
+    background-color: #513B56;
 
     font-family: 'Gamja Flower', cursive; 
-    font-size: 15px; 
+    font-size: 18px; 
 
     display: block;
     margin: auto;
-    border-radius: 20px; 
+    border: none;
+    border-radius: 20px;
     padding:10px; 
+}
+
+#submit:hover {
+    background-color: #525174;
 }
 
 #database {
@@ -68,16 +74,23 @@ th {
     font-size: 25px;
 }
 
+td {
+    font-family: 'Indie Flower', cursive;
+}
+
 tr:nth-child(even) {
     background-color: #5251743c;
 }
 
 tr:hover {
-    background-color: #184E77;
-    color: #B5E48C !important;
+    background-color: #B5E48C;
 }
 
 .data-img {
     width: 100%;
     height: 100%;
+}
+
+footer {
+    background-color: #9eb8b2;
 }
