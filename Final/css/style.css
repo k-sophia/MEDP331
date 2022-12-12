@@ -1,20 +1,126 @@
-body {
-    background-color: #00A8963c;
+* { padding: 0; margin: 0;}
+
+html, body {
+    background-color: #9eb8b2;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+	overflow: hidden;
+
+    width: 100%;
+	height: auto;
+
+    text-align: center;
+    font-family: 'Gamja Flower', cursive; 
+}
+
+header {
+    margin-bottom: 130px;
+    padding-bottom: 50px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+	width: 100%;
+	height: 100%;
+	padding: 150px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #184E77;
+
+    background-image: url("../img/test.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	
+}
+
+header .overlay {
+    border-radius: 0 0 85% 85% / 30%;
+    box-shadow: 0 7px 15px #348AA7;
+	
+}
+
+footer .overlay {
+    border-radius: 85% 85% 0 0;
+    box-shadow: 0 -7px 15px #348AA7;
+}
+
+.overlay-content {
+    background-color: #348AA780;
+    width: fit-content;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.header-link , .footer-link {
+    color: #FFF;
+	text-shadow: 1px 1px 1px #513B56;
+    text-decoration: none;
+    margin: auto;
+}
+
+.header-link:hover , .footer-link:hover {
+    color: #513B56;
+    text-shadow: 
+        -1px 0 #FFF, 
+        0 1px #FFF, 
+        1px 0 #FFF, 
+        0 -1px #FFF;
+}
+
+#header-quote {
+    font-family: 'Indie Flower', cursive; 
+    font-size: 25px;
+    max-width: 375px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+#btn-quote {
+    font-family: 'Gamja Flower', cursive; 
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+    background-color: #513B56;
+}
+
+#btn-quote:hover {
+    background-color: #525174;
+}
+
+#navigation {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header h1 {
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+header h2, header p {
+    font-size: 30px;
+	margin-bottom: 30px;
 }
 
 footer {
-    display: flex; justify-content:center; 
-    align-content:center; 
-    text-align:center; 
-    font-family: 'Gamja Flower', cursive; 
     font-size: 25px;
-}
-
-.footer-link {
-    text-decoration: none; 
-    color: #184E77;
-}
-
-.footer-link:hover {
-    color: #513B56;
+    padding-top: 50px;
+    background-color: #000;
 }
