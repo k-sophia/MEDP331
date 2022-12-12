@@ -31,7 +31,13 @@
     if(isset($_POST['cols'])){
         foreach ($cols as $value) {
             $columns .= ", $value";
-            $col_th .= "<th>$value</th>";
+
+            if($value == "common_names") {
+                $col_th .= "<th>common names</th>";
+            }
+            else {
+                $col_th .= "<th>$value</th>";
+            }
         }
     }
 
