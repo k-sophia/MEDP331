@@ -23,7 +23,11 @@
     font-size: 20px;
 }
 
-#symbol, #season {
+#col-check input {
+    margin: 5px;
+}
+
+#symbol, #season, #maintenance {
     margin: 15px;
 }
 
@@ -91,6 +95,10 @@ tr:hover {
     object-fit: cover;
     width: 100%;
     height: auto;
+}
+
+.no-data {
+    font-size: 35px;
 }
 
 footer {

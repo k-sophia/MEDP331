@@ -24,6 +24,7 @@
 
     // sql query
     $columns = "img, names";
+    $col_count = 2;
     $col_th = "
         <th>image</th>
         <th>name</th>";
@@ -31,6 +32,7 @@
     if(isset($_POST['cols'])){
         foreach ($cols as $value) {
             $columns .= ", $value";
+            $col_count += 1;
 
             if($value == "common_names") {
                 $col_th .= "<th>common names</th>";
@@ -68,76 +70,80 @@
         exit();
     }
 
-    $length = 400;
-    if(isset($_POST['cols'])){
-        $length = 200 + (count($cols) * 150);
-    }
+    $length = 400 + (($col_count - 2) * 150);
     // echo $length;
-    echo "<table style='max-width:" . $length . "px; line-height: 32px;'>
+    $return = "<table style='max-width:" . $length . "px; line-height: 32px;'>
     <tr>
     $col_th
     </tr>";
     
     while($row = mysqli_fetch_array($result)) {
-        echo "<tr>";
+        $return .= "<tr>";
 
         $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
-        echo "<td>" . $image . "</td>";
+        $return .= "<td>" . $image . "</td>";
 
-        echo "<td>" . $row['names'] . "</td>";
+        $return .= "<td>" . $row['names'] . "</td>";
 
         if(isset($_POST['cols'])){
             if(in_array("common_names", $cols)) {
                 $common = explode(",", $row['common_names']);
-                echo "<td>";
+                $return .= "<td>";
                 foreach($common as $value){
-                    echo $value . "<br>";
+                    $return .= $value . "<br>";
                 }
-                echo "</td>";
+                $return .= "</td>";
             }
     
             if(in_array("symbolism", $cols)) {
-                echo "<td>" . $row['symbolism'] . "</td>";
+                $return .= "<td>" . $row['symbolism'] . "</td>";
             }
     
             if(in_array("season", $cols)) {
                 $season = explode(",", $row['season']);
-                echo "<td>";
+                $return .= "<td>";
                 foreach($season as $value){
-                    echo $value . "<br>";
+                    $return .= $value . "<br>";
                 }
-                echo "</td>";
+                $return .= "</td>";
             }
     
             if(in_array("maintenance", $cols)) {
-                echo "<td>" . $row['maintenance'] . "</td>";
+                $return .= "<td>" . $row['maintenance'] . "</td>";
             }
     
             if(in_array("water", $cols)) {
-                echo "<td>" . $row['water'] . "</td>";
+                $return .= "<td>" . $row['water'] . "</td>";
             }
     
             if(in_array("sun", $cols)) {
                 $sun = explode(",", $row['sun']);
-                echo "<td>";
+                $return .= "<td>";
                 foreach($sun as $value){
-                    echo $value . "<br>";
+                    $return .= $value . "<br>";
                 }
-                echo "</td>";
+                $return .= "</td>";
             }
     
             if(in_array("soil", $cols)) {
                 $soil = explode(",", $row['soil']);
-                echo "<td>";
+                $return .= "<td>";
                 foreach($soil as $value){
-                    echo $value . "<br>";
+                    $return .= $value . "<br>";
                 }
-                echo "</td>";
+                $return .= "</td>";
             }   
         }
 
-        echo "</tr>";
+        $return .= "</tr>";
     }
-    echo "</table>";
+
+    if(mysqli_fetch_array($result) == "") {
+        $return .= "<tr><td class='no-data' colspan='$col_count'>No Data Found</td></tr>";
+    }
+
+    $return .= "</table>";
+
+    echo $return;
     $con->close();
 ?>
