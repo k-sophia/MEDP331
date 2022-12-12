@@ -38,7 +38,7 @@ header {
 	color: #FFF;
 	text-shadow: 1px 1px 1px #184E77;
 
-    background-image: url("../img/test.jpg");
+    background-image: url("../img/background-img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -82,7 +82,7 @@ footer .overlay {
 #header-quote {
     font-family: 'Indie Flower', cursive; 
     font-size: 25px;
-    max-width: 375px;
+    max-width: 390px;
     margin: auto;
     margin-bottom: 15px;
 }
@@ -122,5 +122,4 @@ header h2, header p {
 footer {
     font-size: 25px;
     padding-top: 50px;
-    background-color: #000;
 }

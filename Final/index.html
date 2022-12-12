@@ -3,15 +3,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Indie+Flower&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/index.css">
         <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/style.css">
         <title>Final Website</title>
     </head>
-    <body style="background-color: #0280903c;">
+
+    <body>
+
+        <header>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h1>Floral Something</h1>
+                    <h2 id="header-quote">Reasons for Choosing US</h2>
+                    <button id="btn-quote" onclick="changeQuote()">Change Quote</button>
+                    <div id="navigation">
+                        <h2><a class="header-link" href="https://k-sophia.github.io/MEDP331/Final/tips.html">Plant Care Tips</a></h2>
+                        <h2><a class="header-link" href="#">idk</a></h2>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <div id="form-data">
             <form id="form" method="post">
@@ -64,11 +79,13 @@
             <br>
             <div id="database"><b>Flower info will be listed here...</b></div>
         </div>
-        
+
         <footer>
-            <div>
-                <a class='footer-link' href='https://k-sophia.github.io/MEDP331/index.html'>MEDP 331</a>
-                <h3>© 2022 Kelly Camacho</h3>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h1><a class='footer-link footer-text' href='https://k-sophia.github.io/MEDP331/index.html'>MEDP 331</a></h1>
+                    <h1 class='footer-text'>© 2022 Kelly Camacho</h1>
+                </div>
             </div>
         </footer>
 
@@ -103,4 +120,5 @@
             });
         </script>
     </body>
+    <script type="text/javascript" src="https://k-sophia.github.io/MEDP331/Final/scripts/quote.js"></script>
 </html>

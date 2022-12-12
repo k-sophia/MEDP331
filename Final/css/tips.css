@@ -296,4 +296,8 @@ li + li {
     .resource-header {
         display: none;
     }
-  }
+}
+
+footer {
+    background-color: #000;
+}
