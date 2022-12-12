@@ -11,6 +11,10 @@
         $season = $_POST['season'];
     }
 
+    if(isset($_POST['maintenance'])){
+        $maintenance = $_POST['maintenance'];
+    }
+
     $servername = "localhost:3308"; // swiss server designated localhost
     $username = "dev05dbuser"; // database dev02dbuser,dev03dbuser, etc.
     $password = "MmnCVtfx51YiO5pQ"; // password for your database FM02web2020,FM03web2020, etc.
@@ -44,18 +48,32 @@
     }
 
     $where = "";
+    $prior = false;
 
     if($symbol != "") {
         $where .= "symbolism like " . "'%$symbol%'";
+        $prior = true;
     }
 
-    if($symbol != "" && $season != "") {
-        $where .= " AND season like " . "'%$season%'";
+    if($season != "") {
+        if($prior) {
+            $where .= " AND season like " . "'%$season%'";
+        }
+        else {
+            $where .= "season like " . "'%$season%'";
+        }
+        $prior = true;
     }
-
-    if($symbol == "" && $season != "") {
-        $where .= "season like " . "'%$season%'";
+    if($maintenance != "") {
+        if($prior) {
+            $where .= " AND maintenance = " . "'$maintenance'";
+        }
+        else {
+            $where .= "maintenance  = " . "'$maintenance'";
+        }
+        $prior = true;
     }
+    $prior = false;
 
     // echo $where;
     $sql = "SELECT $columns FROM flowers";
@@ -77,69 +95,73 @@
     $col_th
     </tr>";
     
+    $database = "";
     while($row = mysqli_fetch_array($result)) {
-        $return .= "<tr>";
+        $database .= "<tr>";
 
         $image = "<img src=" . $row["img"] . " class='data-img'" . ">";
-        $return .= "<td>" . $image . "</td>";
+        $database .= "<td>" . $image . "</td>";
 
-        $return .= "<td>" . $row['names'] . "</td>";
+        $database .= "<td>" . $row['names'] . "</td>";
 
         if(isset($_POST['cols'])){
             if(in_array("common_names", $cols)) {
                 $common = explode(",", $row['common_names']);
-                $return .= "<td>";
+                $database .= "<td>";
                 foreach($common as $value){
-                    $return .= $value . "<br>";
+                    $database .= $value . "<br>";
                 }
-                $return .= "</td>";
+                $database .= "</td>";
             }
     
             if(in_array("symbolism", $cols)) {
-                $return .= "<td>" . $row['symbolism'] . "</td>";
+                $database .= "<td>" . $row['symbolism'] . "</td>";
             }
     
             if(in_array("season", $cols)) {
                 $season = explode(",", $row['season']);
-                $return .= "<td>";
+                $database .= "<td>";
                 foreach($season as $value){
-                    $return .= $value . "<br>";
+                    $database .= $value . "<br>";
                 }
-                $return .= "</td>";
+                $database .= "</td>";
             }
     
             if(in_array("maintenance", $cols)) {
-                $return .= "<td>" . $row['maintenance'] . "</td>";
+                $database .= "<td>" . $row['maintenance'] . "</td>";
             }
     
             if(in_array("water", $cols)) {
-                $return .= "<td>" . $row['water'] . "</td>";
+                $database .= "<td>" . $row['water'] . "</td>";
             }
     
             if(in_array("sun", $cols)) {
                 $sun = explode(",", $row['sun']);
-                $return .= "<td>";
+                $database .= "<td>";
                 foreach($sun as $value){
-                    $return .= $value . "<br>";
+                    $database .= $value . "<br>";
                 }
-                $return .= "</td>";
+                $database .= "</td>";
             }
     
             if(in_array("soil", $cols)) {
                 $soil = explode(",", $row['soil']);
-                $return .= "<td>";
+                $database .= "<td>";
                 foreach($soil as $value){
-                    $return .= $value . "<br>";
+                    $database .= $value . "<br>";
                 }
-                $return .= "</td>";
+                $database .= "</td>";
             }   
         }
 
-        $return .= "</tr>";
+        $database .= "</tr>";
     }
 
-    if(mysqli_fetch_array($result) == "") {
+    if($database == "") {
         $return .= "<tr><td class='no-data' colspan='$col_count'>No Data Found</td></tr>";
+    }
+    else {
+        $return .= $database;
     }
 
     $return .= "</table>";

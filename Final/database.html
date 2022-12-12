@@ -78,12 +78,12 @@
                     <option value="autumn">autumn</option>
                     <option value="winter">winter</option>
                 </select>
-                <!-- <select id="maintenance" name="maintenance">
+                <select id="maintenance" name="maintenance">
                     <option value="">Select Maintenance Type:</option>
-                    <option value="spring">low</option>
-                    <option value="summer">medium</option>
-                    <option value="autumn">hard</option>
-                </select> -->
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="hard">hard</option>
+                </select>
                 <input id="submit" type="submit" value="display data">
             </form>
             <br>
@@ -112,13 +112,15 @@
 
                     var symbol = $('#symbol').val();
                     var season = $('#season').val();
+                    var maintenance = $('#maintenance').val();
                     $.ajax({
                         type: "POST",
                         url: 'connection_test.php',
                         data: {
                             cols: cols,
                             symbol: symbol,
-                            season: season
+                            season: season,
+                            maintenance: maintenance
                         },
                         success: function(data){
                             // alert(data);
