@@ -1,4 +1,4 @@
-.database-desc h2 , .database-desc p {
+#database-desc h2 , #database-desc p {
     color: #fff;
     text-shadow: 5px 5px 15px #513B56;
 
@@ -8,22 +8,22 @@
     padding: 10px;
 }
 
-.database-desc h2 {
+#database-desc h2 {
     font-size: 50px;
     font-family: "Gamja Flower", cursive;
 }
 
-.database-desc p {
+#database-desc p {
     font-family: "Indie Flower", cursive;
     font-size: 20px;
 }
 
-#display-database {
+#form-data {
     margin: 50px;
     text-align: center;
 }
 
-#display-database {
+#form {
     text-align: center;
     margin: auto;
     padding: 15px;
@@ -102,7 +102,7 @@ select:focus {
     outline: 0;
 }
 
-#submit-display , #submit-edit {
+#submit {
     color: #FFF;
     background-color: #513B56;
 
@@ -116,7 +116,7 @@ select:focus {
     padding:10px; 
 }
 
-#submit-display:hover , #submit-edit:hover {
+#submit:hover {
     background-color: #525174;
 }
 

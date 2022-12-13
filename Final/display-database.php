@@ -90,7 +90,7 @@
 
     $length = 400 + (($col_count - 2) * 150);
     // echo $length;
-    $return = "<table style='max-width:" . $length . "px; line-height: 32px;'>
+    $return = "<table style='max-width:" . $length . "px;'>
     <tr>
     $col_th
     </tr>";

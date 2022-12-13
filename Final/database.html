@@ -33,7 +33,7 @@
             </div>
         </header>
 
-        <div class="database-desc"> 
+        <div id="database-desc"> 
             <h2>Flower Database</h2>
             <p>
                 The database was made using mySQL Database. There is a total of 31 flowers
@@ -41,14 +41,11 @@
                 <br><br>
                 Query the database in the form below. Click the btn to view the entire database.
                 Select wanted criteria to narrow the data given.
-                <br><br>
-                To add to the database, go to
-                <a href="#edit-database">edit database</a>.
             </p>
         </div>
 
-        <div class="form-data">
-            <form id="display-database" method="post">
+        <div id="form-data">
+            <form id="form" method="post">
                 <div class="form-align">
                     <label for="checkbox1">
                         common names
@@ -109,33 +106,10 @@
                         <option value="hard">hard</option>
                     </select>
                 </div>
-                <input id="submit-display" type="submit" value="display data">
+                <input id="submit" type="submit" value="display data">
             </form>
             <br>
             <div id="database"></div>
-        </div>
-
-        <div class="database-desc"> 
-            <h2>Edit Database</h2>
-            <p>
-                The database was made using mySQL Database. There is a total of 31 flowers
-                currently in this collection.
-                <br><br>
-                Query the database in the form below. Click the btn to view the entire database.
-                Select wanted criteria to narrow the data given.
-                <br><br>
-                To view the database, go to
-                <a href="#display-database">display database</a>.
-            </p>
-        </div>
-
-        <div class="form-data">
-            <form id="edit-database" method="post">
-
-                <input id="submit-edit" type="submit" value="edit data">
-            </form>
-            <br>
-            <div id="edit"></div>
         </div>
 
         <footer>
@@ -149,8 +123,10 @@
 
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>
+
+
             $(document).ready(function(){
-                $('#display-database').on('submit', function(e){
+                $('#form').on('submit', function(e){
                     //Stop the form from submitting itself to the server.
                     e.preventDefault();
                     const data = new FormData(e.target);
@@ -175,24 +151,7 @@
                         }
                     });
                 });
-
-                $('#edit-database').on('submit', function(e){
-                    //Stop the form from submitting itself to the server.
-                    e.preventDefault();
-                    $.ajax({
-                        type: "POST",
-                        url: 'edit-database.php',
-                        success: function(data){
-                            // alert(data);
-                            $( "#edit" ).empty();
-                            $( "#edit" ).append(data);
-                        }
-                    });
-                });
             });
-
-
-            
         </script>
     </body>
     <script type="text/javascript" src="https://k-sophia.github.io/MEDP331/Final/scripts/quote.js"></script>
