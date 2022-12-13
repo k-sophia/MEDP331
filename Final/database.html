@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="https://k-sophia.github.io/MEDP331/Final/css/style.css">
         <title>Final Website</title>
 
-        <!-- <style>
+        <style>
 
-        </style> -->
+        </style>
     </head>
 
     <body>
@@ -34,7 +34,7 @@
 
         <div id="form-data">
             <form id="form" method="post">
-                <div id="col-check">
+                <div class="form-align">
                     <label for="checkbox1">
                         common names
                         <input id="checkbox1" name="mycheckboxs" type="checkbox"  checked="true" value="common_names"/>
@@ -64,26 +64,36 @@
                         <input id="checkbox7" name="mycheckboxs" type="checkbox" checked="true" value="soil"/>
                     </label>
                 </div>
-                <select id="symbol" name="symbol">
-                    <option value="">Select a Symbol:</option>
-                    <option value="love">love</option>
-                    <option value="death">death</option>
-                    <option value="pride">pride</option>
-                    <option value="purity">purity</option>
-                </select>
-                <select id="season" name="season">
-                    <option value="">Select a Season:</option>
-                    <option value="spring">spring</option>
-                    <option value="summer">summer</option>
-                    <option value="autumn">autumn</option>
-                    <option value="winter">winter</option>
-                </select>
-                <select id="maintenance" name="maintenance">
-                    <option value="">Select Maintenance Type:</option>
-                    <option value="low">low</option>
-                    <option value="medium">medium</option>
-                    <option value="hard">hard</option>
-                </select>
+                <div class="form-align">
+                    <select id="symbol" name="symbol">
+                        <option value="">Symbol:</option>
+                        <option value="beauty">beauty</option>
+                        <option value="death">death</option>
+                        <option value="happiness">happiness</option>
+                        <option value="innocence">innocence</option>
+                        <option value="love">love</option>
+                        <option value="nobility">nobility</option>
+                        <option value="passion">passion</option>
+                        <option value="pride">pride</option>
+                        <option value="protection">protection</option>
+                        <option value="purity">purity</option>
+                        <option value="sadness">sadness</option>
+                        <option value="wealth">wealth</option>
+                    </select>
+                    <select id="season" name="season">
+                        <option value="">Season:</option>
+                        <option value="spring">spring</option>
+                        <option value="summer">summer</option>
+                        <option value="autumn">autumn</option>
+                        <option value="winter">winter</option>
+                    </select>
+                    <select id="maintenance" name="maintenance">
+                        <option value="">Maintenance Type:</option>
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                        <option value="hard">hard</option>
+                    </select>
+                </div>
                 <input id="submit" type="submit" value="display data">
             </form>
             <br>
