@@ -1,3 +1,23 @@
+#database-desc h2 , #database-desc p {
+    color: #fff;
+    text-shadow: 5px 5px 15px #348AA7;
+
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+#database-desc h2 {
+    font-size: 50px;
+    font-family: "Gamja Flower", cursive;
+}
+
+#database-desc p {
+    font-family: "Indie Flower", cursive;
+    font-size: 20px;
+}
+
 #form-data {
     margin: 50px;
     text-align: center;
@@ -138,8 +158,9 @@ tr:nth-child(even) {
     background-color: #5251743c;
 }
 
-tr:hover {
-    background-color: #B5E48C;
+tr:hover td {
+    background-color: #184e77e6;
+    color: #F0F3BD;
 }
 
 .data-img {
