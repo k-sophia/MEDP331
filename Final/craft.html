@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Indie+Flower&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="css/craft.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Final Website</title>
+    </head>
+
+    <body>
+        <button onclick="topFunction()" id="topBTN">to top</button>
+        <header>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h1>Crafting Flowers</h1>
+                    <h2 id="header-quote"></h2>
+                    <button id="btn-quote" onclick="changeQuote()">Change Quote</button>
+                    <div id="navigation">
+                        <h2><a class="header-link" href="https://swiss1.hunter.cuny.edu/students/dev5/database.html">Database</a></h2>
+                        <h2><a class="header-link" href="tips.html">Plant Care</a></h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="types" class="section-desc"> 
+            <h2>Arrangment + Alternatives</h2>
+            <p>
+                Flowers have different uses and can be displayed in many ways. While some 
+                prefer real flowers, others do not want to have the responsibility to take 
+                care of them. Therefore artificial flowers are used in its place. There are 
+                also flowers being immitated for other uses.
+                <br><br>
+                <a href="#arrange">flower alternatives</a>
+                <a href="#alternatives">flower crafts</a>
+                <br><br>
+                For more information about these, go to
+                <a href="#resources">resources</a>.
+            </p>
+        </div>
+
+        <div id="arrange" class="section-desc"> 
+            <h2>Flower Arrangement</h2>
+            <p>
+                There are different types of arrangemnts and designs for flowers. Below are 
+                just a few types with examples.
+            </p>
+            <div class="craft-types">
+                <div class="select-section">
+                    <button id="type-0" class="select-option" onclick="changeArrangeType(0)">
+                        <img src="img/c-icon.png" alt="temp">
+                        <h3>CRESCENT</h3>
+                        <span></span>
+                    </button>
+                    <button id="type-1" class="select-option" onclick="changeArrangeType(1)">
+                        <img src="img/f-icon.png" alt="temp">
+                        <h3>FAN-SHAPED</h3>
+                        <span></span>
+                    </button>
+                    <button id="type-2" class="select-option" onclick="changeArrangeType(2)">
+                        <img src="img/o-icon.png" alt="temp">
+                        <h3>OVAL</h3>
+                        <span></span>
+                    </button>
+                    <button id="type-3" class="select-option arrange-selected" onclick="changeArrangeType(3)">
+                        <img src="img/s-icon.png" alt="temp">
+                        <h3>S-SHAPED</h3>
+                        <span></span>
+                    </button>
+                    <button id="type-4" class="select-option" onclick="changeArrangeType(4)">
+                        <img src="img/w-icon.png" alt="temp">
+                        <h3>WREATH</h3>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="desc-section">
+                    <div class="details-section">
+                        <img id="arrange-img" src="img/s-flower.jpg" alt="temp">
+                        <h3 id="arrange-name">S-SHAPED</h3>
+                        <p id="arrange-text">
+                            The flowers are arranged to form the shape of an ’S’ and show beautiful 
+                            and elegant curved lines. Leaves are typically used as a filler for flowers 
+                            to appear more prominent. 
+                            <br><br>
+                            This arrangement is also knows as ‘Hogarth 
+                            Design’, and typically used for special occasions. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="alternatives" class="section-desc"> 
+            <h2>Flower Alternatives</h2>
+            <p>
+                There are alternatives to using real flowers. Below are a few examples to make
+                flowers and their different uses.
+            </p>
+            <div class="craft-types">
+                <div class="desc-section">
+                    <div class="details-section">
+                        <iframe id="alternative-iframe" 
+                            src="https://www.youtube.com/embed/D3egTjIdbfE" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <h3 id="alternative-name">WATERCOLOR</h3>
+                        <p id="alternative-text">
+                            Painted flowers are visually beautiful and watercolor is a popular choice. 
+                            Like any other watercolor project, flowers can be used. Examples would 
+                            include postcards, bookmarks, interior display, or gifts.
+                        </p>
+                    </div>
+                </div>
+                <div class="select-section alternative-section">
+                    <button id="craft-0" class="select-option" onclick="changeAlternativeType(0)">
+                        <img src="img/c-icon.png" alt="temp">
+                        <h3>CROCHET</h3>
+                        <span></span>
+                    </button>
+                    <button id="craft-1" class="select-option" onclick="changeAlternativeType(1)">
+                        <img src="img/f-icon.png" alt="temp">
+                        <h3>FABRIC</h3>
+                        <span></span>
+                    </button>
+                    <button id="craft-3" class="select-option" onclick="changeAlternativeType(2)">
+                        <img src="img/p-icon.png" alt="temp">
+                        <h3>PAPER</h3>
+                        <span></span>
+                    </button>
+                    <button id="craft-4" class="select-option" onclick="changeAlternativeType(3)">
+                        <img src="img/s-icon.png" alt="temp">
+                        <h3>SUGAR</h3>
+                        <span></span>
+                    </button>
+                    <button id="craft-4" class="select-option alternative-selected" onclick="changeAlternativeType(4)">
+                        <img src="img/w-icon.png" alt="temp">
+                        <h3>WATERCOLOR</h3>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resource-container">
+            <div id="resources" class="section-desc"> 
+                <div class="resource-header">
+                    <img src="img/resource-left.png" alt="" />
+                </div>
+                <div>
+                    <h2>Resources</h2>
+                    <p>These reosurces were gatheres to help learn about flowers arrangements and alterntives to real flowers.</p>    
+                </div>
+                <div class="resource-header">
+                    <img src="img/resource-right.png" alt="" />
+                </div>
+            </div>
+            <div id="list-align" class="section">
+                <ul class="resource-list">
+                    <h2>Flower Arrangement</h2>
+                    <a target="_blank" href="https://darceyflowers.ae/blog/7-different-types-of-flower-arrangements-for-various-occasions/"><li class="resource-first">Darcy Flowers</li></a>
+                    <a target="_blank" href="https://www.cityflowers.co.in/blogs/news/9-types-popular-classic-flower-arrangement-styles"><li>City Flowers</li></a>
+                    <a target="_blank" href="https://luxurycolumnist.com/flower-arrangement-types/"><li>Luxury Columnist</li></a>
+                    <a target="_blank" href="https://www.zhibit.org/cfaa"><li>California Flower <br> Art Academy</li></a>
+                    <a target="_blank" href="https://www.architecturaldigest.com/story/3-pro-florists-arrangements-you-can-do-at-home"><li>Architecture Digest</li></a>
+                </ul>
+                <ul class="resource-list">
+                    <h2>Flower Alternatives</h2>
+                    <a target="_blank" href="https://sarahmaker.com/crochet-flower-patterns/"><li class="resource-first">Sarah Maker</li></a>
+                    <a target="_blank" href="https://tipjunkie.com/diy-fabric-flowers-to-make/"><li>Tip Junkie</li></a>
+                    <a target="_blank" href="https://www.thesprucecrafts.com/x-diy-paper-flowers-you-can-make-for-all-occasions-4172471"><li>The Spruce Crafts</li></a>
+                    <a target="_blank" href="https://cake-geek.com/index.php/sugar-flowers-tutorials/"><li>Cake Geek</li></a>
+                    <a target="_blank" href="https://www.artistsnetwork.com/art-mediums/watercolor/easy-watercolor-flowers-marie-boudon/"><li>Artist Network</li></a>
+                </ul>
+            </div>
+        </div>
+  
+        <footer>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h1><a class='footer-link footer-text' href='https://k-sophia.github.io/MEDP331/index.html'>MEDP 331</a></h1>
+                    <h1 class='footer-text'>© 2022 Kelly Camacho</h1>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <script type="text/javascript" src="scripts/quote.js"></script>
+    <script type="text/javascript" src="scripts/top-btn.js"></script>
+    <script type="text/javascript" src="scripts/select-craft.js"></script>
+</html>
