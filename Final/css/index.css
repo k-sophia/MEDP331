@@ -1,3 +1,8 @@
+#database-desc {
+    color: #fff;
+    text-shadow: 5px 5px 15px #348AA7;
+}
+
 #desc {
     color: #fff;
     text-shadow: 5px 5px 15px #513B56;
@@ -160,5 +165,5 @@ tr:hover td {
 }
 
 footer {
-    background-color: #9eb8b2;
+    background-color: #9eb8b2 !important;
 }

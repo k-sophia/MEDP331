@@ -32,6 +32,18 @@ let arrangements = [
     }
 ]
 
+function randomArrange() {
+    var num = Math.floor(Math.random() * 5);
+    arrangeIMG.src = arrangements[num].img;
+    arrangeType.innerHTML= arrangements[num].name;
+    arrangeText.innerHTML = arrangements[num].text;
+
+    var get = "#type-" + num;
+    let selected = document.querySelector(get);
+    selected.classList.add("arrange-selected");
+}
+randomArrange()
+
 function changeArrangeType(num) {
     arrangeIMG.src = arrangements[num].img;
     arrangeType.innerHTML= arrangements[num].name;
@@ -80,7 +92,17 @@ let alternatives = [
     },
 ]
 
+function randomAlternative() {
+    var num = Math.floor(Math.random() * 5);
+    alternativeIframe.src = alternatives[num].iframe;
+    alternativeType.innerHTML= alternatives[num].name;
+    alternativeText.innerHTML = alternatives[num].text;
 
+    var get = "#craft-" + num;
+    let selected = document.querySelector(get);
+    selected.classList.add("alternative-selected");
+}
+randomAlternative()
 
 function changeAlternativeType(num) {
     alternativeIframe.src = alternatives[num].iframe;
